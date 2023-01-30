@@ -7,4 +7,6 @@ import lombok.ToString;
 @ToString
 public class Car {
     private String carName;
+
+    private String Model;
 }
