@@ -42,8 +42,8 @@ public class CustomerApi {
     }
 
     @GetMapping("/customer/{id}")
-
     public Optional<Customer> getByID(@PathVariable int id) {
         return customerService.getCustomerById(id);
     }
+
 }

@@ -11,4 +11,5 @@ public interface CustomerService {
      Optional<Customer> getCustomerById(Integer id);
      List<Customer> getByLastName(String lastName);
      List<Customer> createAll(List<Customer> customers);
+     Customer updateCustomer(Customer customer);
 }

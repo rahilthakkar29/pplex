@@ -9,8 +9,9 @@ import org.springframework.context.ApplicationContext;
 public class PragraPlexApplication {
 
     public static void main(String[] args) {
-       ApplicationContext context=  SpringApplication.run(PragraPlexApplication.class, args);
-        System.out.println("context.getBean(Car.class) = " + context.getBean(Car.class));
+        ApplicationContext context=  SpringApplication.run(PragraPlexApplication.class, args);
+        //System.out.println("context.getBean(Car.class) = " + context.getBean(Car.class));
+
     }
 
 }

@@ -4,3 +4,62 @@ SELECT * FROM CUSTOMER  WHWRE LAST_NAME='Singh' [42000-214]
 2023-01-28 13:27:45 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CUSTOMER  WHERE LAST_NAME like [*]""%Singh%';;"; SQL statement:
 SELECT * FROM CUSTOMER  WHERE LAST_NAME like "%Singh%';; [42000-214]
+2023-01-31 20:29:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CUSTOMER_ORDERS TABLE_ORDER [*]TABLE_ORDER"; SQL statement:
+SELECT * FROM CUSTOMER_ORDERS TABLE_ORDER TABLE_ORDER [42000-214]
+2023-02-01 21:21:13 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]DESC TABLE TABLE_ORDER"; expected "DELETE, DROP, DECLARE, DEALLOCATE"; SQL statement:
+DESC TABLE TABLE_ORDER [42001-214]
+2023-02-01 22:40:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE [*]* FROM TABLE_ORDER WHERE CUSTOMER_ID=null"; expected "identifier"; SQL statement:
+DELETE * FROM TABLE_ORDER WHERE CUSTOMER_ID=null [42001-214]
+2023-02-01 22:41:10 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "T" not found; SQL statement:
+DELETE T FROM TABLE_ORDER T WHERE CUSTOMER_ID=null [42102-214]
+2023-02-05 19:19:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]TABLE CUSTOMER SET CREATE_DATE=CURRENT_TIMESTAMP()"; expected "identifier"; SQL statement:
+UPDATE TABLE CUSTOMER SET CREATE_DATE=CURRENT_TIMESTAMP() [42001-214]
+2023-02-05 19:19:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]TABLE CUSTOMER SET CREATE_DATE=CURRENT_TIMESTAMP"; expected "identifier"; SQL statement:
+UPDATE TABLE CUSTOMER SET CREATE_DATE=CURRENT_TIMESTAMP [42001-214]
+2023-02-05 20:59:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-05 21:00:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-05 21:02:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-05 21:11:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-05 21:19:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "INTEGER, BINARY"; SQL statement:
+select movie0_.movie_id as movie_id1_1_0_, movie0_.movie_name as movie_na2_1_0_ from movie movie0_ where movie0_.movie_id=? [22018-214]
+2023-02-05 21:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "INTEGER, BINARY"; SQL statement:
+select movie0_.movie_id as movie_id1_1_0_, movie0_.movie_name as movie_na2_1_0_ from movie movie0_ where movie0_.movie_id=? [22018-214]
+2023-02-05 21:23:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-05 21:29:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "BINARY to INTEGER" [22018-214]
+2023-02-18 14:07:20 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 17 more
